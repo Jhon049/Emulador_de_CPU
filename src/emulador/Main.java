@@ -29,11 +29,8 @@ public class Main {
         int dato = 0;
         String posicion = "";
         String posicion2 = "";
-        System.out.println("Entré al método Nombre");
 
         while(subrutina[i]!=null){
-            System.out.println("Ingresé al While, " + i);
-            System.out.println("Posicion siguiente: "+ subrutina[i++]);
             caracter = subrutina[i].charAt(0);
             switch (caracter){
                 case 'M':
@@ -92,7 +89,6 @@ public class Main {
                 case 'I':
                     caracter = subrutina[i].charAt(2);
                     if(caracter=='C'){
-                        registro1[6].valor=2147483647;
                         posicion = String.valueOf(subrutina[i].charAt(5));
                         posicion = posicion + subrutina[i].charAt(6);
                         pos = Integer.parseInt(posicion);
@@ -102,7 +98,6 @@ public class Main {
                         else{
                             registro1[pos].valor++;
                         }
-                        System.out.println(registro1[6].valor);
                     }
                     else{
                         String cadena = "";
@@ -119,15 +114,12 @@ public class Main {
                     if(caracter=='M'){
                         dato = Integer.parseInt(String.valueOf(subrutina[i]).substring(4, (subrutina[i].length())));
                         i = dato;
-                        System.out.println(i);
                     }
                     else{
-                        //registro1[0].valor=0;
                         dato = Integer.parseInt(String.valueOf(subrutina[i]).substring(3, (subrutina[i].length())));
                         if(registro1[0].valor==0){
                             i = dato;
                         }
-                        System.out.println(i);
                     }
                     break;
 
